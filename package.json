@@ -6,7 +6,7 @@
   "repository": "git@github.com:innovate-technologies/player",
   "description": "A simple player with now playing info for SHOUTca.st",
   "dependencies": {
-    "angular": "1.6.1",
+    "angular": "1.6.7",
     "angular-animate": "1.4.8",
     "angular-sanitize": "1.4.8",
     "bootstrap": "^3.3.6",
