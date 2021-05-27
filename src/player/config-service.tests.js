@@ -27,7 +27,7 @@ describe("ConfigService", function () {
       };
 
       let config;
-      this.$httpBackend.expectGET("https://itframe.innovatete.ch/player/" + username).respond(200, testResponse);
+      this.$httpBackend.expectGET("https://itframe.unmutedte.ch/player/" + username).respond(200, testResponse);
       this.service.getConfig(username).then(function (_config_) {
         config = _config_;
       });
@@ -38,8 +38,8 @@ describe("ConfigService", function () {
     it("should return a rejected promise if the server returns a 500", function () {
       const username = "doesnotexist";
       let calledFailureFn = false;
-      this.$httpBackend.expectGET("https://itframe.innovatete.ch/player/" + username).respond(500, {});
-      this.service.getConfig(username).then(function () {}, function () {
+      this.$httpBackend.expectGET("https://itframe.unmutedte.ch/player/" + username).respond(500, {});
+      this.service.getConfig(username).then(function () { }, function () {
         calledFailureFn = true;
       });
       this.$httpBackend.flush();

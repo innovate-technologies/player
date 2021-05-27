@@ -89,7 +89,7 @@ export default /*@ngInject*/ function PlayerCtrl(
 
   let username = $location.search().username;
 
-  ConfigService.getTunein(username).then((data)=>{
+  ConfigService.getTunein(username).then((data) => {
     ConfigService.getConfig(username).then((config) => initialise(config, data.streamUrl), () => this.state = this.states.error);
   }, () => this.state = this.states.error);
 
@@ -182,7 +182,7 @@ export default /*@ngInject*/ function PlayerCtrl(
     }
   };
 
-  let socket = io.connect("https://np-rt.innovatete.ch/");
+  let socket = io.connect("https://np-rt.unmutedte.ch/");
 
   this.songs = [];
 
