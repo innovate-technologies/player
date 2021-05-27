@@ -80,16 +80,17 @@ export default /*@ngInject*/ function PlayerCtrl(
     logo.src = this.config.logo;
 
     this.player.state = this.player.states.stopped;
-    if (this.config.autoPlay) {
-      this.player.toggle(this.config.streamUrl);
-    }
+    // Disable auto play.
+    // if (this.config.autoPlay) {
+    //   this.player.toggle(this.config.streamUrl);
+    // }
 
     $rootScope.pageTitle = this.config.name;
   };
 
   let username = $location.search().username;
 
-  ConfigService.getTunein(username).then((data)=>{
+  ConfigService.getTunein(username).then((data) => {
     ConfigService.getConfig(username).then((config) => initialise(config, data.streamUrl), () => this.state = this.states.error);
   }, () => this.state = this.states.error);
 
@@ -182,7 +183,7 @@ export default /*@ngInject*/ function PlayerCtrl(
     }
   };
 
-  let socket = io.connect("https://np-rt.innovatete.ch/");
+  let socket = io.connect("https://np-rt.unmutedte.ch/");
 
   this.songs = [];
 

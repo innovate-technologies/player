@@ -6,7 +6,7 @@ export default class ConfigService {
         return $q.reject();
       }
       return $http
-        .get("https://itframe.innovatete.ch/player/" + username)
+        .get("https://itframe.unmutedte.ch/player/" + username)
         .then(response => response.data);
     };
     this.getTunein = (username) => {
@@ -14,7 +14,7 @@ export default class ConfigService {
         return $q.reject();
       }
       return $http
-        .get("https://itframe.innovatete.ch/tunein/" + username)
+        .get("https://itframe.unmutedte.ch/tunein/" + username)
         .then(response => response.data);
     };
   }
