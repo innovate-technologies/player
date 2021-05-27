@@ -80,9 +80,10 @@ export default /*@ngInject*/ function PlayerCtrl(
     logo.src = this.config.logo;
 
     this.player.state = this.player.states.stopped;
-    if (this.config.autoPlay) {
-      this.player.toggle(this.config.streamUrl);
-    }
+    // Disable auto play.
+    // if (this.config.autoPlay) {
+    //   this.player.toggle(this.config.streamUrl);
+    // }
 
     $rootScope.pageTitle = this.config.name;
   };
